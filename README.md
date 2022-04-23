@@ -1,1 +1,4 @@
 # EzSensFinder
+
+## License
+MIT
