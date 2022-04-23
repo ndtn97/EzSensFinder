@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>EzSensFinder</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">EzSensFinder</a>
+    </div>
+  </nav>
+  <!-- Page content-->
+  <div class="container">
+    <br>
+    <p class="lead">二分探索によるマウス感度最適化</p>
+    <br>
+    <div class="row">
+      <div class="col-2 text-center" id="minval_label">
+        Min:
+      </div>
+      <div class="col-10 text-center">
+        <input type="number" id="minval" class="form-control" oninput="onInputChange()">
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-2 text-center" id="maxval_label">
+        Max:
+      </div>
+      <div class="col-10 text-center">
+        <input type="number" id="maxval" class="form-control" oninput="onInputChange()">
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-2 text-center">
+        Sens:
+      </div>
+      <div class="col-10 text-center">
+        <input type="number" id="sens" class="form-control" readonly>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col text-center">
+            <button type="button" class="btn btn-danger btn-lg" id="btn_lower" onclick="onPushedL()" disabled>Lower</button>
+          </div>
+          <div class="col text-center">
+            <button type="button" class="btn btn-primary btn-lg" id="btn_higher" onclick="onPushedH()" disabled>Higher</button>
+          </div>
+          <div class="col text-center">
+            <button type="button" class="btn btn-secondary btn-lg" id="btn_undo" onclick="onPushedU()" disabled>Undo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
