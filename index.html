@@ -28,30 +28,30 @@
 
     <br>
     <div class="row">
-      <div class="col-2 text-center" id="minval_label">
+      <div class="col-3 text-center" id="minval_label">
         MinSens:
       </div>
-      <div class="col-10 text-center">
+      <div class="col-9 text-center">
         <input type="number" id="minval" class="form-control" oninput="onInputChange()">
       </div>
     </div>
 
     <br>
     <div class="row">
-      <div class="col-2 text-center" id="maxval_label">
+      <div class="col-3 text-center" id="maxval_label">
         MaxSens:
       </div>
-      <div class="col-10 text-center">
+      <div class="col-9 text-center">
         <input type="number" id="maxval" class="form-control" oninput="onInputChange()">
       </div>
     </div>
 
     <br>
     <div class="row">
-      <div class="col-2 text-center">
+      <div class="col-3 text-center">
         Sens:
       </div>
-      <div class="col-10 text-center">
+      <div class="col-9 text-center">
         <input type="number" id="sens" class="form-control" readonly>
       </div>
     </div>
@@ -59,19 +59,16 @@
     <br>
 
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-10">
-        <div class="row">
-          <div class="col text-center">
-            <button type="button" class="btn btn-danger btn-lg" id="btn_lower" onclick="onPushedL()" disabled>Lower</button>
-          </div>
-          <div class="col text-center">
-            <button type="button" class="btn btn-primary btn-lg" id="btn_higher" onclick="onPushedH()" disabled>Higher</button>
-          </div>
-          <div class="col text-center">
-            <button type="button" class="btn btn-secondary btn-lg" id="btn_undo" onclick="onPushedU()" disabled>Undo</button>
-          </div>
-        </div>
+      <div class="col text-center">
+        <button type="button" class="btn btn-danger btn-lg" id="btn_lower" onclick="onPushedL()" disabled>Lower</button>
+      </div>
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary btn-lg" id="btn_higher" onclick="onPushedH()"
+          disabled>Higher</button>
+      </div>
+      <div class="col text-center">
+        <button type="button" class="btn btn-secondary btn-lg" id="btn_undo" onclick="onPushedU()"
+          disabled>Undo</button>
       </div>
     </div>
   </div>
@@ -79,7 +76,8 @@
   <div class="fixed-bottom">
     <div class="container">
       <p class="text-muted">Copyright (c) 2022 ndtn97<br>This software is released under the MIT License, see LICENSE.
-      <a href="https://github.com/ndtn97/EzSensFinder">Repo</a></p>
+        <a href="https://github.com/ndtn97/EzSensFinder">Repo</a>
+      </p>
     </div>
   </div>
 
