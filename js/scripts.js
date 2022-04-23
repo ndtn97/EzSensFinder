@@ -72,7 +72,6 @@ function onPushed(btn) {
     minvals.push(minval);
     maxvals.push(maxval);
 
-    console.log(minvals, maxvals)
     document.getElementById("sens").value = ((minval + maxval) / 2).toFixed(10);
 
 }
@@ -90,7 +89,6 @@ function onPushedU() {
 }
 
 function onInputChange() {
-    viewvals();
     vals = getValues();
     let minval = vals["minval"];
     let maxval = vals["maxval"];
