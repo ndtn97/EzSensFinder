@@ -103,11 +103,13 @@ function onInputChange() {
 
     if (isNaN(minval)) {
         setValid("minval", false);
+        setButton(true);
     } else {
         setValid("minval", true);
     }
     if (isNaN(maxval)) {
         setValid("maxval", false);
+        setButton(true);
     } else {
         setValid("maxval", true);
     }
