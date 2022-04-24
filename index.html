@@ -12,19 +12,21 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="assets/favicon.svg" height="32"> EzSensFinder </a>
+      <a class="navbar-brand" href="#"><img src="assets/favicon.svg" height="32"> EzSensFinder</a>
+      <span class="navbar-text"><a href="https://github.com/ndtn97/EzSensFinder"><i class="bi bi-github"></i></a></span>
     </div>
   </nav>
   <!-- Page content-->
   <div class="container">
     <br>
-    <p class="lead">マウス感度最適化<br>Mouse sensitivity optimization</p>
+    <p>Sensitivity search app for FPS titles<br>FPS向け感度探索アプリ</p>
 
     <br>
     <div class="row">
@@ -71,15 +73,62 @@
           disabled>Undo</button>
       </div>
     </div>
-  </div>
 
-  <div class="fixed-bottom">
-    <div class="container">
-      <p class="text-muted">Copyright (c) 2022 ndtn97<br>This software is released under the MIT License, see LICENSE.
-        <a href="https://github.com/ndtn97/EzSensFinder">Repo</a>
-      </p>
+    <br>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <div class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            How to use
+          </button>
+        </div>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">Enter the minimum sensitivity value in MinSens</li>
+              <li class="list-group-item">Enter the maximum sensitivity value in MaxSens</li>
+              <li class="list-group-item">Try the sensitivity displayed on Sens
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-danger">Tap Lower if you want to lower the sensitivity</li>
+                  <li class="list-group-item list-group-item-primary">Tap Higher if you want to increase the sensitivity</li>
+                  <li class="list-group-item list-group-item-secondary">Tap Undo if you want to try the previous sensitivity again</li>
+                </ul>
+              <li class="list-group-item">Repeat step 3</li>
+           </ol>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            使い方
+          </button>
+        </div>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">MinSensに設定できる感度の最小値を入力</li>
+              <li class="list-group-item">MaxSensに設定できる感度の最大値を入力</li>
+              <li class="list-group-item">Sensに表示された感度を試す
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-danger">感度を下げたい場合、Lowerを選ぶ</li>
+                  <li class="list-group-item list-group-item-primary">感度を上げたい場合、Higherを選ぶ</li>
+                  <li class="list-group-item list-group-item-secondary">1つ前の感度をもう一度試したい場合、Undoを選ぶ</li>
+                </ul>
+              <li class="list-group-item">3を繰り返す</li>
+           </ol>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
