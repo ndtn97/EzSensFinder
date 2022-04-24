@@ -23,11 +23,19 @@ function getValues() {
     return { minval, maxval, sens };
 }
 
-function setColor(id, color) {
-    obj = document.getElementById(id);
-    obj.style.color = color;
-    obj = document.getElementById(id + '_label');
-    obj.style.color = color;
+function setValid(id, is_valid) {
+    let setClass;
+    let remClass;
+    if (is_valid) {
+        setClass = "is-valid";
+        remClass = "is-invalid"
+    }else {
+        setClass = "is-invalid";
+        remClass = "is-valid";
+    }
+    obj = document.getElementById(id)
+    obj.classList.remove(remClass);
+    obj.classList.add(setClass);
 }
 
 function setButton(flag) {
@@ -94,24 +102,24 @@ function onInputChange() {
     let maxval = vals["maxval"];
 
     if (isNaN(minval)) {
-        setColor("minval", "red");
+        setValid("minval", false);
     } else {
-        setColor("minval", "black");
+        setValid("minval", true);
     }
     if (isNaN(maxval)) {
-        setColor("maxval", "red");
+        setValid("maxval", false);
     } else {
-        setColor("maxval", "black");
+        setValid("maxval", true);
     }
 
     if (!(isNaN(minval) || isNaN(maxval))) {
         if (minval >= maxval) {
-            setColor("minval", "red");
-            setColor("maxval", "red");
+            setValid("minval", false);
+            setValid("maxval", false);
             setButton(true);
         } else {
-            setColor("minval", "black");
-            setColor("maxval", "black");
+            setValid("minval", true);
+            setValid("maxval", true);
             setButton(false);
             document.getElementById("sens").value = ((minval + maxval) / 2).toFixed(10);
         }
